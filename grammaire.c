@@ -44,10 +44,7 @@ g->nb_dir = 0;
  
 
 void grammaire_afficher(Grammaire g) {
-  f_grammaire = f_open((*nomfic), "r") ;
-
-  fprintf(f_grammaire) ;
-  fclose(f_grammaire) ;
+printf("%s\n %d\n %d\n %s\n")
 }
 
 int grammaire_trouver(Grammaire *g, char cmd) {
