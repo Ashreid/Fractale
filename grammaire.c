@@ -46,10 +46,37 @@ g->nb_dir = 0;
 
 void grammaire_afficher(Grammaire g) {
 
-printf("%s\n %d\n %d\n %s\n", g.titre, g.turtle_dir_max, g.turtle_dir_init, g.axiome);
-
+	int i = 0;
+	
+	printf("Nom de la grammaire : %s\n", g.titre);
+	printf("Nom de directions : %d\n", g.nb_dir);
+	printf("Direction initiale : %d\n", g.turtle_dir_init);
+	printf("Axiome : %s\n", g.axiome);
+	
+	while(i < 10 && strcmp(&g.car[i], "")) {
+		
+			printf("Regle de production %d : ", i+1);
+			printf("%c->%s\n", g.car[i], g.regle[i]);
+			i++;
+		}
 }
 
-int grammaire_trouver(Grammaire *g, char cmd) {
 
+int grammaire_trouver(Grammaire *g, char cmd) {
+	
+	int i=0;
+	int j;
+	
+	while (&g->car[i] != NULL && j ==0) {
+		
+		if(g->car[i] == cmd) {
+			
+			j = 1;
+			i++;
+			}
+		}
+		
+	if(!j)
+		return (i);
+	return(-1);
 }
