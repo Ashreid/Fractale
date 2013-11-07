@@ -16,8 +16,8 @@ typedef struct {
   
 } Grammaire ;
 
-void grammaire_lire(char *nomfic, Grammaire *g);
-void grammaire_afficher(Grammaire g);
-int  grammaire_trouver(Grammaire *g, char cmd);
+void grammaire_lire(char *nomfic, Grammaire *g) ;
+void grammaire_afficher(Grammaire g) ;
+int  grammaire_trouver(Grammaire *g, char cmd) ;
  
 #endif 
