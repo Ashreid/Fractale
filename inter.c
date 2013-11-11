@@ -4,7 +4,7 @@
 #include <math.h>
 
 #include "inter.h"
-#include "grammaire.h"
+#include "tortue.h"
 #include "tools.h"
 
 
@@ -69,4 +69,18 @@ void inter_interpreter(Interprete *inter, float factor, Tortue *tortue, char *no
   pile_liberer(p);
 }
 
+void inter_init(Interprete *inter){
+	inter->mot = NULL;
+	inter->taille = 0;
+	inter->xmin = 0;
+	inter->xmax = 0;
+	inter->ymin = 0;
+	inter->ymax = 0;
+	
+	}
 
+void inter_liberer(Interprete *inter){
+	
+	inter_init(inter);
+	
+	}
